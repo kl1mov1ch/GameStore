@@ -1,0 +1,219 @@
+﻿<Window x:Class="GameStore.Pages.EntryWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameStore.Pages"
+        mc:Ignorable="d"
+                Icon="..\Source\LogoIcon.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="EntryWindowView" Height="550" Width="380" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+    <Window.Resources>
+        <ResourceDictionary Source="..\Style\Style.xaml"/>
+    </Window.Resources>
+    <TabControl x:Name="EntryTab">
+        <TabControl.Style>
+            <Style TargetType="{x:Type TabControl}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter Grid.Row="1"
+                                              ContentSource="SelectedContent"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </TabControl.Style>
+        <TabItem x:Name="AuthorizationTab">
+            <Border x:Name="BorderWindowStyle" CornerRadius="10" BorderThickness="6" Background="#2e2e2c" MouseDown="BorderWindowStyle_MouseDown" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35px"/>
+                        <RowDefinition Height="0.7*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="ToolBar" Grid.Row="0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                            <Image x:Name="MinPageButton" Height="24px" Width="24px" MouseDown="MinPageButton_MouseDown">
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Source" Value="..\Source\MinPageIconDark.png"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinPageButton}" Value="True">
+                                                <Setter Property="Source" Value="..\Source\MinPageIconWhite.png"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                            <Image x:Name="ClosePageButton" Height="24px" Width="24px" Margin="10,0,0,0" MouseDown="ClosePageButton_MouseDown">
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Source" Value="..\Source\ClosePageIconDark.png"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=ClosePageButton}" Value="True">
+                                                <Setter Property="Source" Value="..\Source\ClosePageIconWhite.png"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </StackPanel>
+                    </Grid>
+                    <Grid x:Name="InfoEntryWindow" Grid.Row="1">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Image Source="..\Source\Logo.png" Height="59" Width="280"/>
+                            <TextBlock Text="Вход" HorizontalAlignment="Center" FontSize="28" FontWeight="SemiBold" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="280px">
+                            <TextBlock Text="Введите почту" Foreground="White"  FontWeight="SemiBold"/>
+                            <Border BorderThickness="0,0,0,3" CornerRadius="1" BorderBrush="White" >
+                                <TextBox x:Name="GmailTextBox" Style="{StaticResource GmailTextBox}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="280px">
+                            <TextBlock Text="Введите пароль" Foreground="White"  FontWeight="SemiBold"/>
+                            <Border BorderThickness="0,0,0,3" CornerRadius="1" BorderBrush="White" >
+                                <PasswordBox x:Name="PasswordtBoxStyle" Style="{StaticResource PasswordtBoxStyle}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="4" Width="120px" Height="60px">
+                        <Border CornerRadius="13" BorderThickness="2" BorderBrush="Transparent" Background="White" Height="40px" Width="110px">
+                            <Button Content="Войти"
+                             x:Name="EntryButton"
+                             Style="{StaticResource RegEntryButton}"
+                             Command="{Binding Authorization}"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="5" Width="110px">
+                        <Button Content="Регистрация"
+                    x:Name="RegButton"
+                            Command="{Binding OpenRegistration}"
+                    Style="{StaticResource ButtonBackgroundNone}"/>
+
+                    </Grid>
+                    <!--<Grid Grid.Row="4" Width="110px">
+                        <Button Content="Войти"
+                            x:Name="EntryButton"
+                            Command="{Binding Authorization}"
+                            Style="{StaticResource RegEntryButton}"/>
+                    </Grid>
+                    <Grid Grid.Row="5" Width="90px">
+                        <Button Content="Регистрация"
+                    x:Name="RegButton" Command="{Binding OpenRegistration}"
+                    Style="{StaticResource RegEntryButtonWindow}"/>
+                    </Grid>-->
+                </Grid>
+            </Border>
+        </TabItem>
+        <TabItem x:Name="RegistrationTab">
+            <Border x:Name="BorderWindowStyleRegistration" CornerRadius="10" BorderThickness="6" Background="#2e2e2c" MouseDown="BorderWindowStyleRegistration_MouseDown">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35px"/>
+                        <RowDefinition Height="0.7*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="0.4*"/>
+                        <RowDefinition Height="0.3*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="ToolBarRegistration" Grid.Row="0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                            <Image x:Name="MinPageButtonRegistration" Height="24px" Width="24px" MouseDown="MinPageButtonRegistration_MouseDown">
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Source" Value="..\Source\MinPageIconDark.png"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinPageButtonRegistration}" Value="True">
+                                                <Setter Property="Source" Value="..\Source\MinPageIconWhite.png"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                            <Image x:Name="ClosePageButtonRegistration" Height="24px" Width="24px" Margin="10,0,0,0" MouseDown="ClosePageButtonRegistration_MouseDown">
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Source" Value="..\Source\ClosePageIconDark.png"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=ClosePageButtonRegistration}" Value="True">
+                                                <Setter Property="Source" Value="..\Source\ClosePageIconWhite.png"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </StackPanel>
+                    </Grid>
+                    <Grid x:Name="InfoEntryWindowRegistrarion" Grid.Row="1">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Image Source="..\Source\Logo.png" Height="59" Width="280"/>
+                            <TextBlock Text="Регистрация" HorizontalAlignment="Center" FontSize="28" FontWeight="SemiBold" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="280px">
+                            <TextBlock Text="Введите почту"
+                           Foreground="White"  FontWeight="SemiBold"/>
+                            <Border BorderThickness="0,0,0,3" CornerRadius="1" BorderBrush="White" >
+                                <TextBox x:Name="GmailTextBoxRegistration" Style="{StaticResource GmailTextBox}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="280px">
+                            <TextBlock Text="Введите пароль"
+                           Foreground="White"  FontWeight="SemiBold"/>
+                            <Border BorderThickness="0,0,0,3" CornerRadius="1" BorderBrush="White" >
+                                <PasswordBox x:Name="PasswordtBoxStyleRegistration" Style="{StaticResource PasswordtBoxStyle}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="280px">
+                            <TextBlock Text="Повторите пароль"
+                           Foreground="White" FontWeight="SemiBold"/>
+                            <Border BorderThickness="0,0,0,3" CornerRadius="1" BorderBrush="White" >
+                                <PasswordBox x:Name="PasswordtRepeatBoxStyle" Style="{StaticResource PasswordtBoxStyle}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="5" Width="120px" Height="60px">
+                        <Border CornerRadius="13" BorderThickness="2" BorderBrush="Transparent" Background="White" Height="40px" Width="110px">
+                            <Button Content="Регистрация"
+                             x:Name="RegButtonRegistration"
+                             Style="{StaticResource RegEntryButton}"
+                             Command="{Binding Registration}"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="6" Width="110px">
+                        <Button Content="Войти"
+                    x:Name="EntryButtonRegistration"
+                            Command="{Binding OpenAuthorization}"
+                    Style="{StaticResource ButtonBackgroundNone}"/>
+
+                    </Grid>
+                </Grid>
+            </Border>
+
+        </TabItem>
+    </TabControl>
+</Window>

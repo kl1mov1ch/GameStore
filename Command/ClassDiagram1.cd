@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameStore.Commands.CommandReference" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAACAAUAAEAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Command\CommandReference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Commands.DelegateCommand" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAQACCAQQAAEQAAAAAAAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>Command\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Commands.DelegateCommand&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAQACCAQQAAEQAAAAAAAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>Command\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Commands.CommandManagerHelper">
+    <Position X="20.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Command\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.DataBase.Basket">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAQAgAAAAAAAAAAQAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>DataBase\Basket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.DataBase.MyDbContext">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>DataBase\MyDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.DataBase.Orders">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACACAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAABBAAQ=</HashCode>
+      <FileName>DataBase\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.DataBase.Products">
+    <Position X="11.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.DataBase.Users">
+    <Position X="13" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAQACAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DataBase\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.Pages.AddingWindowView" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAQgAQAAACAAiDAAARAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Pages\AddingWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.AdminMainWindowView" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAEgAQAAQADIEAFAAAAREAABAAABAQCAAFAACAIA=</HashCode>
+      <FileName>Pages\AdminMainWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.BasketWindowView" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAiAAAAAAAQwBIAAAAgCABkAABAAIAUYCAABAAAAAA=</HashCode>
+      <FileName>Pages\BasketWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.ChangeWindowView" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAQAAAQgAQAAACAAiDAAARAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Pages\ChangeWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.EntryWindowView" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAwAAAAAAQUAgAEIADAAAAAQEAABgQABAAABAAEQIA=</HashCode>
+      <FileName>Pages\EntryWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.MessageWindowView" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\MessageWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Pages.UserMainWindowView" BaseTypeListCollapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgAAAAAICSABAEABBgCABACAAAAAQAaAAAQAAAAAA=</HashCode>
+      <FileName>Pages\UserMainWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.UnitOfWork.UnitOfWork">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEBAIAAACAQgAAAAAAQAAYAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>UnitOfWork\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Utilites.ImageManager">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAAAAAABA=</HashCode>
+      <FileName>Utilites\ImageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.Utilites.ProductVM">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAgAAgAAAAAAQAAAAAABAAAAAABAAAAAA=</HashCode>
+      <FileName>Utilites\ProductVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStore.Repository.BasketRepository" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository\BasketRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Repository.OrdersRepository" BaseTypeListCollapsed="true">
+    <Position X="13" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository\OrdersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Repository.ProductsRepository" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository\ProductsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameStore.Repository.UsersRepository" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository\UsersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="GameStore.Repository.IRepository&lt;T&gt;">
+    <Position X="18.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

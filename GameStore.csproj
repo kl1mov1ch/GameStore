@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Source\BasketDark.png" />
+    <None Remove="Source\BasketWhite.png" />
+    <None Remove="Source\ClosePageIconDark.png" />
+    <None Remove="Source\ClosePageIconWhite.png" />
+    <None Remove="Source\HomeIcone.png" />
+    <None Remove="Source\HomeIconeDark.png" />
+    <None Remove="Source\Logo.png" />
+    <None Remove="Source\LogoIcon.ico" />
+    <None Remove="Source\MinPageIconDark.png" />
+    <None Remove="Source\MinPageIconWhite.png" />
+    <None Remove="Source\ProfileIcone.png" />
+    <None Remove="Source\Relode.png" />
+    <None Remove="Source\RelodeWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Source\BasketDark.png" />
+    <Resource Include="Source\BasketWhite.png" />
+    <Resource Include="Source\HomeIconeDark.png" />
+    <Resource Include="Source\LogoIcon.ico" />
+    <Resource Include="Source\ProfileIcone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="MimeKit" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Source\ClosePageIconDark.png" />
+    <Resource Include="Source\ClosePageIconWhite.png" />
+    <Resource Include="Source\HomeIcone.png" />
+    <Resource Include="Source\Logo.png" />
+    <Resource Include="Source\MinPageIconDark.png" />
+    <Resource Include="Source\MinPageIconWhite.png" />
+    <Resource Include="Source\Relode.png" />
+    <Resource Include="Source\RelodeWhite.png" />
+  </ItemGroup>
+
+</Project>
